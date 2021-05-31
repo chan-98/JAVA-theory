@@ -1,0 +1,16 @@
+class Exercise1 {
+  public static void main(String[] args) {
+    // simple arithmetic
+    int p = 91;
+    double q = 31.8;
+    double s = p+q;
+    double x = p*q;
+    System.out.println("The sum is:" +s+ "The Product is: " +x);
+    
+    //storing DNA sequence as variable
+    
+    String dna = "ATACGATACAA";
+    System.out.println("The Dna sequence is " +dna+ " and its length is " +dna.length()); //note down syntax for length
+    
+  }
+}
