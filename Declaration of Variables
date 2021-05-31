@@ -1,0 +1,7 @@
+class Variables {
+  int data = 50; //global variable since it is outside of main block
+  static int m = 100; //declaration of static variable
+  public static void main(String[] args){
+    int n = 90; //local variable since it is inside main block
+  }
+}
