@@ -1,0 +1,28 @@
+class Class1notes {
+  public static void main(String[] args) {
+    //simple addition and print
+    int a = 3;
+    int b = 11;
+    int c = a+b;
+    System.out.println(c);
+    
+    //Casting Auto and Manual
+    int myInt = 9;
+    double myDouble = myInt; //Automatic Casting
+    System.out.println(myInt);
+    System.out.println(myDouble);
+    
+    double myD = 11.23;
+    int myI = (int) myD; //Manual Casting
+    System.out.println(myD);
+    System.out.println(myI);
+    
+    //Spacing
+    
+    System.out.println("Declaring Variables");
+    int x = 50;
+    double y = 3.222333;
+    float z = 3.14f; //make sure to put the f after the float number otherwise it'll say compilation error
+    System.out.println("The Declared variables are:- \n Integer:" +x+ "\nDouble:" +y+ "\nFloat:" +z+ "\n"); //notice the space between n and Integer is not there for others The spaces are called 'literals' we need to be cautious of them
+  }
+}
