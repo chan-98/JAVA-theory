@@ -1,0 +1,127 @@
+class Classtwo {
+  public static void main(String[] args) {
+    
+    
+    // CONTROL STATEMENTS
+    
+    
+    
+    //TYPES OF CONTROL STATEMENTS
+    System.out.println("There are 3 types of control statements: \n A)Conditional Statements \n  If \n  If-else \n  Switch \n B)Looping Statements \n  While \n  For \n  Do \n C) Jump Statements \n  Break \n  Continue \n  Return \n  Case \n  Default");  
+  
+    //IF ELSE STATEMENT EXAMPLE
+    //Pass or Fail
+    //when cutoff for passing is 75 percentage
+    int cutoff = 75;
+    if (cutoff>=75) {
+      System.out.println("You have Passed!");
+    }
+    else {
+      System.out.println("Please try again next year!");
+    }
+    
+    
+   //SWITCH STATEMENT EXAMPLE 1
+   // we're already giving an automatic input
+   //syntax is switch (variable) case n colon statement semicolon break semicolon
+    int day = 1;
+    switch (day) {
+        case 0: System.out.println("Sunday"); break;
+        case 1: System.out.println("Monday"); break;
+    }
+   //need to give an input for variable otherwise compilation error
+   //break will make the command come out of the loop
+   //case must start from 0, not 1
+    
+    
+   //SWITCH STATEMENT EXAMPLE 2
+   //use of DEFAULT statement
+   int weather = 2;
+   switch (weather) {
+     case 0: System.out.println("Sunny");
+       break;
+     case 1: System.out.println("Cloudy");
+       break;
+     case 2: System.out.println("Rainy");
+       break;
+     case 3: System.out.println("Cold");
+       break;
+     case 4: System.out.println("Hot");
+       break;
+     case 5: System.out.println("Windy");
+       break;
+     default: System.out.println("Pleasant");
+    }
+   // suppose int weather was assigned 7, then default would be printed
+    
+    
+   
+  // LOOP STATEMENTS: WHILE LOOP
+  //intitialisation (assignment of variable) is a seperate statement before the loop
+  // loop continuation condition is given in the bracket. it shd be about where the loop shd stop
+  int power1 = 2;
+  int n = 20;
+  while (power1 <= n/2) {
+    power1 = 2*power1;
+    System.out.println(power1);
+  }
+    
+  
+    
+  // LOOP STATEMENTS: FOR LOOP
+  //initalise another variable outside (before) loop
+  //for (declare & initialise loop control variable; loop continuation condition; increment/dec)
+  int power2 = 2;
+  for (int i = 0; i<=7; i++) {
+    System.out.println(i + " " + power2);
+    power2 = 2*power2;
+  }   
+  //this runs for 0 to 7 ie 8 iterations
+       
+  // Factorial using For statement
+  int f = 5;
+  int fact = 1;
+  for (f=5; f>0; f--) {
+    fact = fact*f;
+  }
+  System.out.println(fact);
+  //if i put print statement inside the block it will print product for every iteration, and only the final 2 prods will be the actual factorial
+  
+ 
+   //Compute a finite sum and product using for statement
+   int sum = 0;
+   int prod = 1;
+   int z = 5;
+   for (int i = 0; i <= z; i++) {
+     sum += i;     
+   }
+   for (int j = 1; j <= z ; j++){
+     prod *= j; 
+   }
+   System.out.println(sum + " " + prod);
+    
+   // print a table of function values
+   // what the hell is this i have no idea
+   for (int x = 0; x <= z; x++) {
+     System.out.println(x + " " + 2*Math.PI*x/z);
+   }
+   
+    
+    
+   //DO WHILE STATEMENT
+   // exit control loop
+   int dowhile = 1;
+   do {
+     System.out.println(dowhile);
+     dowhile++;
+   }while(dowhile <= 10);
+    
+   
+    
+    
+   // ARRAYS
+    
+    
+    
+   //Arrays are a simple list of same type of elements. Indices start at 0. Each object is called element. They are all stored at consecutive locations.
+    
