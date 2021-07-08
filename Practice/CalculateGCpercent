@@ -1,0 +1,85 @@
+package Practice;
+import java.util.Scanner;
+import java.util.ArrayList;
+
+/*
+ *  THIS IS A PROGRAM TO CALCULATE GC PERCENTAGE IN A USER GIVEN DNA SEQUENCE
+ *  @author Chandini
+ *  @version 2.0
+ *  @since 08 July 2021
+ */
+
+// Create a method getGCpercent
+// parameters: String dna
+// method type: double; return GC Percent
+
+public class percentGC {
+	
+	
+public static double getGCpercent(String sequence) {
+	
+	int len = sequence.length();
+	int gc = 0;				
+	
+	// gc will track the number of GC bases in sequence
+	
+	for (int i=0; i<len; i++) {	
+		if(sequence.charAt(i)=='G' || sequence.charAt(i)=='g' || sequence.charAt(i)=='C' || sequence.charAt(i)=='c') {
+			gc++;
+		}
+	}
+	
+	// Converting gc and len to double variables count and total respectively
+	
+	double count = (double) gc;
+	double total = (double) len;
+	
+	double gcPercent = count*100/total;
+	
+	return (gcPercent);
+	
+}
+
+
+// The main method gets the DNA bases from the user using Scanner and stores it in an ArrayList
+
+
+	public static void main(String[] args) {
+		
+	       String s1 = "";   	//s1 will store the line inputs
+
+	       String dna = "";		//dna will contain the full sequence
+	       
+	       int i = 0;	    	//i is used to fill the ArrayList
+	       
+	       ArrayList<String> dna1 = new ArrayList<>();
+		    
+	       System.out.println("Please input the bases in your sequence. Press Enter once to input a new base. Press Enter twice when you are done.");
+	       Scanner myDNA = new Scanner(System.in);
+	       
+	       // User input for arraylist using while loop
+		
+	       while(!(s1 = myDNA.nextLine()).isEmpty())		//while the given input s1 is not empty
+	       {
+			dna1.add(i,s1); 
+			i++;
+	       }
+
+
+	      for(int j = 0; j < dna1.size(); j++)
+	      {
+	      		String base = dna1.get(j);
+	      		dna = dna + base;
+	      }
+	      
+	      // calling for the method getGCpercent(String dna)
+	      
+	      double percent = getGCpercent(dna);		//percent is the GC percentage of the dna sequence
+	      
+	      System.out.println("The percentage of GC content in your DNA sequence is:\n" +percent);
+	      
+	      myDNA.close();
+	}
+
+}
+
