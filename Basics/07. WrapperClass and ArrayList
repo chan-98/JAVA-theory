@@ -1,0 +1,59 @@
+package Basics;
+import java.util.ArrayList;
+
+public class arrayL {
+
+	public static void main(String[] args) {
+		/*
+		 * ARRAYLIST	=> 		A resizable array.
+		 * 						Elements can be added/removed after the compilation phase.
+		 * 						Stores reference datatypes.
+		 * !!! To use arraylist, we need to IMPORT java.util.ArrayList; !!!
+		 * 
+		 * SYNTAX		=>		ArrayList<refDataType> 
+		 * In order to use primitive datatypes in array list, we store them as wrapper classes.
+		 * 
+		 * WRAPPER CLASS=>		Provides a way to store primitive dt as reference dt.
+		 * 
+		 * 		//primitive					//wrapperclass	- these are reference types.
+		 * 		boolean						Boolean
+		 * 		int							Integer
+		 * 		char						Character
+		 * 		double 						Double
+		 * 						String is already a reference datatype.
+		 * 						Put a dot . after the wrapper classes and you'll see a bunch of useful methods
+		 * 						just like the string methods. Eg: StringName.indexOf()
+		 */
+		
+		// Wrapper Classes
+		Boolean a = true;
+		Integer b = 123;
+		Character c = '@';
+		Double d = 123.123;
+		String e = "Chandini";
+		System.out.println("Here are your reference datatypes: \n" +a+ "\n" +b+ "\n" +c+ "\n" +d+ "\n" +e+ "\n");
+		
+		// ArrayList
+		
+		// Declare the ArrayList: 	ArrayList<refDataType>ALname = new ArrayList<refDataType>();
+		ArrayList<String> food = new ArrayList<String>();
+		
+		// To add elements to the arraylist, use the ALname.add() function
+		
+		food.add("Pizza");
+		food.add("Biriyani");
+		food.add("Ice Cream");
+		
+		// Print the array list the same way you would print an array.
+		// Use the ALname.get() function to access an element.
+		
+		System.out.println("Your token contains: ");
+		
+		for(int i=0; i<food.size(); ++i) {
+			System.out.println((i+1)+ "\t" +food.get(i));
+		}
+		
+	}
+
+
+}
