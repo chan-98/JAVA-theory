@@ -1,0 +1,175 @@
+package Basics;
+import java.util.Scanner;
+public class Loops {
+
+	public static void main(String[] args) {
+		
+		Scanner myInput = new Scanner(System.in);
+/*
+ * 1. Let us look at if else statement!
+ */
+		System.out.println("\t THE IF-ELSE STATEMENT \n");
+		System.out.println("How old are you?"); // remember, for eclipse IDE, 'sysout' + ctrl space gives the whole thing
+		int age = myInput.nextInt();
+		
+		if (age<18) {
+			System.out.println("You're literally a child!");
+		}
+		else if (age>=65){
+			System.out.println("Ok boomer! Um, I mean.... You're a senior citizen!");
+		}
+		else {
+			System.out.println("You're an adult!");
+		}
+		myInput.nextLine(); //to clear out because we need input string after input number
+/*
+ * 2. Let us look at switch statement!
+ */
+		System.out.println("\n\t THE SWITCH STATEMENT \n");
+		System.out.println("To print the Japanese word for a given day:");
+		System.out.println("What day is it?"); 
+		//Printing days of the week in Japanese
+		String day = myInput.nextLine();
+		day = day.toLowerCase(); //converting a string to all lowercases
+		switch(day) {
+		case "sunday": case "sun":
+			System.out.println("Kyou wa nichiyoubi desu\n");
+			break;
+		case "monday": case "mon": 
+			System.out.println("Kyou wa getsuyoubi desu\n");
+			break;
+		case "tuesday": case "tue":
+			System.out.println("Kyou wa kayoubi desu\n");
+			break;
+		case "wednesday": case "wed":
+			System.out.println("Kyou wa suiyoubi desu\n");
+			break;
+		case "thursday": case "thu":
+			System.out.println("Kyou wa mokuyoubi desu\n");
+			break;
+		case "friday": case "fri":
+			System.out.println("Kyou wa kinyoubi desu\n");
+			break;
+		case "saturday": case "sat":
+			System.out.println("Kyou wa doyoubi desu\n");
+			break;
+	//break must definitely be used
+		default:
+			System.out.println("Invalid day! Please try again \n");
+	//default may or may not be used depending on situation
+	//default should be within the switch block not outside like "else"
+		}
+		
+		
+/*
+ * 3. Let us look at the while statement!
+ */
+		System.out.println("\n\t THE WHILE STATEMENT \n");
+		System.out.println("To print the powers of 2 while they are less than 20:");
+		int power1 = 2;
+		int n = 20;
+		while (power1 <= n/2) {
+		    power1 = 2*power1;
+		    System.out.println(power1);
+		}
+		System.out.println("\n");
+	//while loop executes a block of statements as long as its condition remains true
+		myInput.close();
+
+		
+/*
+ * 4. Let us look at the for statement!
+ */
+		  //initalise another variable outside (before) loop
+		  //for (declare & initialise loop control variable; loop continuation condition; inc/dec)
+		
+		  System.out.println("\n\tTHE FOR STATEMENT \n");
+		  System.out.println("1. Printing powers for 2 for 8 iterations: ");
+		  int power2 = 2;
+		  for (int i = 0; i<=7; i++) {
+		    System.out.println(i + " " + power2);
+		    power2 = 2*power2;
+		  }   
+		  System.out.println();
+		  //this runs for 0 to 7 ie 8 iterations
+		       
+	// Factorial using For statement:-
+		  System.out.println("\n2. Printing the factorial of 5: ");
+		  int f = 5;
+		  int fact = 1;
+		  for (f=5; f>0; f--) {
+		    fact = fact*f;
+		  }
+		  System.out.println("The factorial of 5 is "+fact+"\n");
+		  //if i put print statement inside the block it will print product for every iteration,
+		  //and only the final 2 prods will be the actual factorial
+		  
+	//Compute a finite sum and product using for statement:-
+		   System.out.println("\n3. Computing finite sum and product of a series: ");
+		   int sum = 0;
+		   int prod = 1;
+		   int z = 5;
+		   for (int i = 0; i <= z; i++) {
+		     sum += i;     
+		   }
+		   for (int j = 1; j <= z ; j++){
+		     prod *= j; 
+		   }
+		   System.out.println("The sum and product are " + sum + " & " + prod + " respctively. \n");
+		    
+	// print a table of function values:-
+		   // what the hell is this i have no idea
+		   System.out.println("\n4. Printing table of function values: ");
+		   for (int x = 0; x <= 4; x++) {
+		     System.out.println(x + " " + 2*Math.PI*x/4); //number*Math.PI means 3.14*number (long version of pi)
+		   }
+		   System.out.println();
+		   
+		   
+/*
+ * 5. Let us look at the do...while statement!
+ */
+	// dowhile is an exit control loop
+		   int dowhile = 1;
+		   do {
+		     System.out.println(dowhile);  //prints numbers 1 to 10
+		     dowhile++;
+		   }while(dowhile <= 10); //the condition comes after the block not within
+		   
+	System.out.println();
+	
+	
+/*
+ * 6. Let us look at nested loops!
+ */
+	
+	//nested loop is a loop inside a loop
+	/* WHOLE THING WORKS WHEN COPY PASTED INTO A FRESH CLASS */
+			
+	System.out.println("\n\tNESTED LOOPS\n");
+	System.out.println("Using a NESTED FOR loop to print a 2D array of any symbol: ");
+	
+	Scanner newInput = new Scanner (System.in);
+	
+	System.out.println("Enter # of rows: ");
+	int rows = newInput.nextInt();
+	newInput.nextLine();
+	System.out.println("Enter # of columns: ");
+	int columns = newInput.nextInt();
+	newInput.nextLine();
+	System.out.println("Enter symbol to use: ");
+	String symbol = newInput.nextLine();
+	//no need to clear with empty nextLine() because this one is just next() not nextLine()
+			
+	for(int i = 1; i<=rows; i++) {
+		System.out.println();
+		for (int j = 1; j<=columns; j++) {
+			System.out.print(symbol); //don't use println here otherwise it won't print in same line
+		}
+	}
+	System.out.println();
+	newInput.close();
+	
+	}
+
+}
