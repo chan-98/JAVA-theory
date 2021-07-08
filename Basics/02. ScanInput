@@ -1,0 +1,58 @@
+package Basics;
+import java.util.Scanner; //Scanner is a class, in the util (utility) package
+
+public class ScanInput {
+	
+	public static void main(String[] args) {
+		
+		Scanner myInput = new Scanner(System.in);
+		/*
+		 * Here the 'myInput' is an object
+		 * usually 'myObj' or 'scObj' is used
+		 * The rest all should be the same
+		 * Now lets see how to actually scan an input
+		 */
+		System.out.println("What is your name?");
+		// name is a string, so declare a string variable called name
+		String name = myInput.nextLine();
+		//note that "string" starts with capital S, because it is not a primitive variable
+		//It is a reference variable, stores an address not a value so theres no size limit
+		/*the nextLine Scanner automatically has a \n in it
+		 * so it will scan then clear out
+		 * then proceed to compile the next statement
+		 */
+		System.out.println("How old are you?");
+		// to scan an integer, we have to use nextInt
+		int age = myInput.nextInt();
+		System.out.println("How many siblings do you have?");
+		int sib = myInput.nextInt();
+		
+		/* here nextInt doesnt have an automatic \n built in
+		 * so when we have to scan another string after int, we need to clear it out
+		 * in order for the program to execute the next function
+		 * otherwise it will skip the next thing it is supposed to scan.
+		 * To clear it out, in the next line, type an empty nextLine scan:
+		 */
+		
+		myInput.nextLine();
+		//if doubtful just remove this and see
+		//will notice that it just skips and executes the print statements
+		//all over again
+		/* this happens only when you have to
+		 * scan a string after a integer... i think.
+		 */
+		System.out.println("What is your favourite food?");
+		String food = myInput.nextLine();
+		
+		//Print these answers:
+		
+		System.out.println("Your name is " +name+ ".");
+		System.out.println("You are "+age+" years old.");
+		System.out.println("You have " +sib+ " siblings.");
+		System.out.println("You like to eat " +food+ ".");
+		
+		myInput.close();  //it is convention to close your scanner
+	}
+			
+
+}
