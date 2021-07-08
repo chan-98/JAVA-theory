@@ -31,6 +31,7 @@ public class BasicGUI {
 		 
 		 double height = Double.parseInt(JOptionPane.showInputDialog("Enter your height in cm"));
 		 JOptionPane.showMessageDialog(null, "You are " +height+ " cm tall");
+		 
 	}
 
 }
