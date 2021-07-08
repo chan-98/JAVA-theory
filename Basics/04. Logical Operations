@@ -1,0 +1,77 @@
+package Basics;
+import java.util.Scanner;
+public class LogicalOps {
+
+	public static void main(String[] args) {
+		/* Logical operators: connect 2 or more expressions
+		 * Remember when you tried to do if (60>age>=18)?
+		 * That was stupid! You should've used and operator
+		 * 
+		 * 		&& = AND = both conditions must be true
+		 * 		!! = OR = either condition must be true
+		 * 		! = NOT = Reverses boolean value of condition 
+		 */
+		
+//Example 1
+		System.out.println("\tAND Operator");
+		Scanner scObj = new Scanner (System.in);
+		System.out.println("Enter the temperature in Celsius");
+		int temp = scObj.nextInt();
+		if (temp >30) {
+			System.out.println("Its hot out");
+		}
+		else if (temp>=22 && temp<=30) {
+			System.out.println("It's pleasant");
+		}
+		else {
+			System.out.println("It's cold!");
+		}
+		scObj.nextLine();
+
+//Example 2
+		System.out.println("\n\n \tOR Operator");  	// \t gives tab (space) and \n gives newline
+		System.out.println("You are playing a game! Press q or Q to quit");
+		String response = scObj.nextLine();
+		
+		if (response.equals("q") || response.equals("Q")) { //stringName.equals(var_or_"string") will see if the stringName & the string within brackets are equal
+			System.out.println("You quit the game"); //we are checking to see if our response is equal to q or Q
+		}
+		else {
+			System.out.println("You are still playing the game");
+		}
+		
+		
+//Example 3
+		System.out.println("\n\n\tNOT Operator example 1");
+		System.out.println("You are playing a game! Press q or Q to quit");
+		String resp = scObj.nextLine();
+		
+		if (!resp.equals("q") || resp.equals("Q")) {
+			System.out.println("You quit the game"); 
+			//here the not operator ! precedes the condition.
+			//we are checking to see if our resp is NOT equal to q OR equal to Q
+			//so anything other than q, this statement will be executed
+		}
+		else {
+			System.out.println("You are still playing the game");
+		}
+		
+//Example 4
+		System.out.println("\n\tNOT Operator example 2");
+		System.out.println("You are playing a game! Press q or Q to quit");
+		String r = scObj.nextLine();
+		
+		if (!r.equals("q") && !r.equals("Q")) {
+			System.out.println("You are still playing the game!"); 
+			//here the not operator ! precedes the condition.
+			//we are checking to see if our resp is NOT equal to q AND NOT equal to Q
+			//so anything other than q, Q, this statement will be executed
+		}
+		else {
+			System.out.println("You quit the game");
+		}
+		
+		scObj.close();
+	}
+
+}
