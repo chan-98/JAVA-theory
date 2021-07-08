@@ -1,0 +1,38 @@
+package Basics;
+import java.util.Scanner;
+
+public class MathMethods {
+	
+	public static void main(String[] args) {
+		
+		float x = 3.14f;
+		float y = -	1.161f;
+		
+		float z	= Math.max(x, y); 				//compares 2 nums of same data type & returns the maximum value
+		System.out.println(z);
+		System.out.println(Math.min(x,  y));	//min of 2 numbers
+		System.out.println(Math.abs(y)); 		//absolute val of y
+		System.out.println(Math.sqrt(z)); 		//square root of z
+		System.out.println(Math.round(x)); 		//round value of x
+		System.out.println(Math.ceil(x)); 		//ceiling value of 3.14 is 4 (round UP)
+		System.out.println(Math.floor(y)); 		//Round DOWN (floor value of) -1.16 is -2
+		System.out.println(Math.floor(z)); 		//Floor value of 3.14 is 3
+		
+		// Find hypotenuse of a triangle
+		
+		Scanner myInput = new Scanner(System.in);
+		System.out.println("Enter the base of the triangle in cm: ");
+		double 	base = myInput.nextDouble();
+		System.out.println("Enter the height of the triangle in cm: ");
+		double height = myInput.nextDouble();;
+		float hypotenuse = (float)Math.sqrt(base*base + height*height);
+		System.out.println("The Hypotenuse of the given triangle using manual calculation"
+				+ " is " +hypotenuse+ " cm.");
+		float hyp = (float) Math.hypot(base, height);
+		System.out.println("The Hypotenuse of the triangle using the Math.hypot method is " +hyp+ " cm.");
+		
+		myInput.close();  //It is good practice to close the scanner
+			
+		
+	}
+}
