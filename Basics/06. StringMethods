@@ -1,0 +1,98 @@
+package Basics;
+import java.util.Scanner;
+
+public class StringMethods {
+
+	public static void main(String[] args) {
+		
+		String name;
+		
+		Scanner myString = new Scanner(System.in); 
+/*
+ * 1.	stringVar1.equalsIgnoreCase(stringVar2 <or> "stringName")
+ */
+		System.out.println("\n\t1. stringVar1.equalsIgnoreCase(stringVar2 <or> ''stringName'') returns a boolean");
+		System.out.println("----------------------------");
+		System.out.println("Enter a name: ");
+		name = myString.nextLine(); 
+		
+		if(name.equalsIgnoreCase("Chandini Venkatesan")) {
+			System.out.println("Welcome " +name);
+		}
+		else {
+			System.out.println();
+		}
+		
+/*
+ * 2.	stringName.length
+ */
+		System.out.println("\n\t2. stringVar.length() returns an integer");
+		System.out.println("----------------------------");
+		
+		System.out.println("The length of your name is: " +name.length());
+		
+/*
+ * 3. 	stringName.charAt(index)
+ */
+		System.out.println("\n\t3. stringVar.charAt(index) returns the char present at that index");
+		System.out.println("----------------------------");
+		
+		System.out.println("At index = 3 -- 4th character of your name is: " +name.charAt(3));
+		
+/*
+* 3. 	stringName.indexOf("char")
+*/
+		System.out.println("\n\t3. stringName.indexOf(\"char\") returns the index at which the char is present");
+		System.out.println("----------------------------");
+				
+		System.out.println("The letter i is present in your name in the index: " +name.indexOf("i"));
+		System.out.println("The letter H is present in your name in the index: " +name.indexOf("H"));
+		System.out.println("The letter d is present in your name in the index: " +name.indexOf("d"));
+		System.out.println("The letter w is present in your name in the index: " +name.indexOf("w"));
+				
+		//case sensitive. both capital H and e were not there, so -1 is the result.
+
+/*
+* 4. 	stringName.isEmpty()
+*/
+		System.out.println("\n\t4. stringName.isEmpty() returns a boolean value");
+		System.out.println("----------------------------");
+		
+		if(name.isEmpty()) {
+			System.out.println("Type a name");
+		}
+		else {
+			System.out.println("Hi "+name);
+		}
+
+/*
+* 5. 	stringName.toUpperCase() 	<and> 	stringname.toLowerCase()
+*/
+		System.out.println("\n\t5. stringName.toUpperCase() <or> stringName.toLowercase changes case");
+		System.out.println("----------------------------");
+		
+		System.out.println(name.toLowerCase());
+		System.out.println(name.toUpperCase());
+
+/*
+* 6. 	stringName.trim()
+*/
+		System.out.println("\n\t6. stringName.trim() removes all the space in the beginning and the end, not the middle");
+		System.out.println("----------------------------");
+		
+		System.out.println(name.trim());
+
+/*
+* 7. 	stringName.replace('char1', 'char2')
+*/
+		System.out.println("\n\t7. stringName.replace(char1, char2) replaces a character char1 with another char2");
+		System.out.println("----------------------------");
+		
+		System.out.println(name.replace("n", "g"));
+		System.out.println(name.replace("h", "C"));
+		System.out.println(name.replace("w", "u"));
+		
+		
+	myString.close();
+}
+}
