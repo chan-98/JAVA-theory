@@ -1,0 +1,36 @@
+package Basics;
+
+//Step1: import JOptionPane class from the swing package, "javax." not "java."...
+
+import javax.swing.JOptionPane;
+
+public class BasicGUI {
+
+	public static void main(String[] args) {
+		// Note down all these syntaxes
+		
+		String name = JOptionPane.showInputDialog("Enter your name");
+		JOptionPane.showMessageDialog(null, "Hello " +name);
+		
+		!!!
+		//<<<!!!why is it not resolving? Even javax.swing.* isnt working!>>>
+		!!!
+		
+		//int age = JOptionPane.showInputDialog("Enter your age");
+		//This wont work because your using a string input thingy
+		//for an integer variable. to fix this, use:
+
+		int age = Integer.parseInt(JOptionPane.showInputDialog("Enter your age"));
+		//parseInt basically takes integer input for a string dialog
+		//Parses the string argument as a signed decimal integer. 
+		//The characters in the string must all be decimal digits, except that the first character may be 
+		//an ASCII '-' or '+' to indicate a positive value. 
+		//The resulting integer value is returned, exactly.
+		 
+		 JOptionPane.showMessageDialog(null, "You are " +age+ " years old");
+		 
+		 double height = Double.parseInt(JOptionPane.showInputDialog("Enter your height in cm"));
+		 JOptionPane.showMessageDialog(null, "You are " +height+ " cm tall");
+	}
+
+}
